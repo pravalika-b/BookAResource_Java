@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link th:href="@{/styles/styles.css}" rel="stylesheet">
+ </head>   
+    
+<body>
+	<header>
+		<div class="w3-top">
+			<div class="w3-bar w3-cyan w3-card" id="myNavbar">
+				<a href="#" class="w3-button w3-wide">BOOK A RESOURCE</a>
+			</div>
+		</div>
+	
+		<nav id="menuItems">
+			<ul class = "navlist">
+				<li><a href="http://localhost:8080/addnewBook" >Register Book</a></li>
+				<li><a href="http://localhost:8080/allbooks" class="active" id="active">Books</a></li>
+			</ul>
+		</nav>
+		
+	</header>
+	<h2>List of Books in the Library </h2>
+	<table id="BookDetails">
+		<thead>	
+			<tr id="tableheader">
+				<td>Book ID</td>
+				<td>Book Name</td>
+				<td>Author Name</td>
+				<td>Genre</td>			
+			</tr>
+            <tr  th:each="book: ${books}">
+                <td th:text="${book.bookId}">Book ID:</td>
+                <!--<td><label id="bookId"></td>-->
+                <td th:text="${book.bookName}">Book Name:</td>
+                <!--<td><label id="bookName"></td>-->
+                <td th:text="${book.authorName}">Author Name:</td>
+                <!--<td><label id="authorName"></td>-->
+                <td th:text="${book.genre}">Genre:</td>
+                <!--<td><label id="genre"></td>-->
+               
+            </tr>  	
+        </thead>  
+    </table>
+    <p>Total books in the library : <table id = "nostyle"><td th:text="${bookscount}"/></table></p>
+	<p>Total Number of Page Hits  :  <table id = "nostyle"><td th:text="${count}"/></table></p>	
+</body>
+</html>

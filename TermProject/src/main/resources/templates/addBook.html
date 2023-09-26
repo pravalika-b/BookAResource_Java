@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link th:href="@{/styles/styles.css}" rel="stylesheet">
+ </head>   
+<body>
+	<header>
+		<div class="w3-top">
+			<div class="w3-bar w3-cyan w3-card" id="myNavbar">
+				<a href="#" class="w3-button w3-wide">BOOK A RESOURCE</a>
+			</div>
+		</div>
+	
+		<nav id="menuItems">
+			<ul class = "navlist">
+				<li><a href="http://localhost:8080/addnewBook" class="active" id="active">Register Book</a></li>
+				<li><a href="http://localhost:8080/allbooks">Books</a></li>
+			</ul>
+		</nav>
+		
+	</header>
+	<h2>Add a New Book to the Library </h2>
+	<form id="form" action="#" th:action="@{/addnewBook}" th:object = "${book}" method="post">
+		<span>Book ID    <input type="number" th:field="*{bookId}" /> <span th:if="${#fields.hasErrors('bookId')}" th:errors="*{bookId}"> </span><br /> </span>
+	
+		<span>Book Name   <input type="text" th:field="*{bookName}" /> <span th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}"> </span><br /> </span>
+		
+		<span>Author Name <input type="text" th:field="*{authorName}" /><span th:if="${#fields.hasErrors('authorName')}" th:errors="*{authorName}"> </span> <br /> </span>
+		
+		<span>Genre       <input type="text" th:field="*{genre}" /><span th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}"> </span> <br /> </span>
+	
+		<input type="submit" value="submit" />
+	</form>
+	<br>
+	<br>
+	<p>Total books in the library : <table id = "nostyle"><td th:text="${bookscount}"/></table></p>
+	<p>Total Number of Page Hits  :  <table id = "nostyle"><td th:text="${count}"/></table></p>
+		
+</body>
+</html>

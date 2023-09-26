@@ -1,0 +1,111 @@
+body {
+		background-image: url("../images/back3.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #696969;
+}
+
+/*Style for the header specifies top margin, background color, rounded corners, and center-aligns content*/
+header{
+	background-color: #696969;
+	text-align: center;
+/*	margin-top : 0.5em;
+	margin-bottom: 0.5em;*/
+/*	border-radius: 1em; */
+	box-shadow: 1em;
+}
+h2
+{
+	/*color:#800000;*/
+	color:black;
+	font-style:italic;
+	text-align: center;
+}
+#tableheader
+{
+	font-style:bold;
+}
+/*Style for the nav specifies text properties */
+nav {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2em;
+
+}
+/*Style specifies paddings and margin for unordered list */
+nav ul {
+	padding: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em; 
+}
+
+/* Style for nav li specifies the background color, rounded corners, removes bullet style, and applies margins and padding for list items within the navigation */
+nav li{
+	background-color: #9D9D93; 
+	border-radius: 2em;
+	list-style-type: none;
+	margin: 0.3em;
+	padding: 0.4em; 
+}
+table {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 3px dotted black; */
+}
+tr ,td
+{
+  padding: 5px;
+  color: #444444;
+  border: 1px dotted #a3a3a3;
+  background-color: #d7d7d7;
+  text-align:center;
+}
+th
+{
+  padding: 12px;
+  background-color: #444444;
+  color: #ffffff;
+}
+td:hover {
+  background-color:blue;
+  color: #FFFFFF;
+  
+}
+#tableheader
+{
+	font-weight:bold;
+	text-align:center;
+}
+form
+{
+	width: 90%;
+  	margin-left: 30%;
+  	margin-right: 50%;
+}
+input[type=text] {
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 70%;
+  box-sizing: border-box;
+}
+input[type=number] {
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 70%;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  border: none;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin-left: 15%;
+  margin-right: 70%;
+  cursor: pointer;
+}
+#nostyle {
+	all:revert;
+}
